@@ -1,2 +1,11 @@
-<h1>Appointments#show</h1>
-<p>Find me in app/views/appointments/show.html.erb</p>
+<h1>Appointments</h1>
+
+<ul>
+  <%= @appointment.each do |app| %>
+    <li>
+      Doctor: <%= app.doctor.name %></br>
+      Patient: <%= app.patient.name %></br>
+      Appointment: <%= app.appointment_datetime %>
+    </li>
+  <% end %>
+</ul>
